@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Aurelia - Amenities</title>
+
+  <!-- Tailwind CSS CDN for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom stylesheet for the Villa Aurelia theme -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main JavaScript file for validation, login, booking, and dashboard behavior -->
+  <script src="validation.js" defer></script>
+</head>
+<body class="bg-stone-100 text-stone-900">
+  <!-- Navigation bar used across the whole hotel website -->
+  <header class="bg-slate-950/95 text-stone-100 px-8 py-5 border-b border-emerald-800/50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide text-emerald-300">Villa Aurelia</h1>
+
+      <nav class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="HomePage.html" class="hover:text-emerald-300">Home</a>
+        <a href="villa-aurelia.html" class="hover:text-emerald-300">Booking</a>
+        <a href="AboutUs.html" class="hover:text-emerald-300">About Us</a>
+        <a href="Amenities.html" class="text-emerald-300">Amenities</a>
+        <a href="GuestReviews.html" class="hover:text-emerald-300">Guest Reviews</a>
+        <a href="CustomerService.html" class="hover:text-emerald-300">Customer Service</a>
+        <a href="Account.html" class="hover:text-emerald-300">Account</a>
+        <a href="Login.html" class="hover:text-emerald-300">Login</a>
+        <a href="Profile.html" class="hover:text-emerald-300">Profile</a>
+        <span id="navUser" class="text-emerald-300 font-bold"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Amenities hero -->
+  <section class="forest-bg text-white px-8 py-16 text-center">
+    <p class="uppercase tracking-[0.3em] text-emerald-300 font-semibold">Hotel Features</p>
+    <h2 class="text-4xl md:text-5xl font-bold mt-4 glow-text">Amenities & Services</h2>
+    <p class="text-stone-300 mt-4">Discover the many amenities and services we offer to make your stay unforgettable.</p>
+    <p class="text-stone-300 mt-2">From relaxation to entertainment, we have something for everyone.</p>
+    <p class="text-stone-300 mt-2">Our amenities are designed to provide you with a comfortable and enjoyable experience.</p>
+    <p class="text-stone-300 mt-2">We strive to exceed your expectations and make your stay as pleasant as possible.</p>
+    <p class="text-stone-300 mt-2">Enjoy the convenience of our 24/7 services and facilities.</p>
+    <p class="text-stone-300 mt-2">Our staff is always ready to assist you with any needs or questions.</p>
+    <p class="text-stone-300 mt-2">Feel free to reach out to us at any time for help or information.</p>
+  </section>
+
+  <!-- Amenity cards -->
+  <section class="max-w-6xl mx-auto px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">🌿</div><h3 class="text-xl font-bold text-emerald-700">Botanical Atrium</h3>
+        <p class="text-stone-600 mt-2">Indoor garden space with vines, glass windows, and natural light.</p>
+        <p class="text-sm text-emerald-500 mt-2">Perfect for relaxation and nature lovers.</p>
+        <p class="text-xs text-stone-500 mt-2">Open daily from 8:00 AM to 10:00 PM.</p>
+        <p class="text-xs text-stone-500 mt-2">Located on the ground floor.</p>
+        <p class="text-xs text-stone-500 mt-2">Free to use for all guests.</p>
+        <p class="text-xs text-stone-500 mt-2">Reservations not required.</p>
+        <p class="text-xs text-stone-500 mt-2">No additional fees or charges.</p>
+        <p class="text-xs text-stone-500 mt-2">Available for all guests during their stay.</p>
+        <p class="text-xs text-stone-500 mt-2">For more information, please contact the front desk.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">🏊</div><h3 class="text-xl font-bold text-emerald-700">Garden Pool</h3>
+        <p class="text-stone-600 mt-2">Relaxing pool surrounded by plants and stone architecture.</p>
+        <p class="text-sm text-emerald-500 mt-2">Perfect for swimming and sunbathing.</p>
+        <p class="text-xs text-stone-500 mt-2">Open daily from 8:00 AM to 8:00 PM.</p>
+        <p class="text-xs text-stone-500 mt-2">Located on the ground floor.</p>
+        <p class="text-xs text-stone-500 mt-2">Free to use for all guests.</p>
+        <p class="text-xs text-stone-500 mt-2">Reservations not required.</p>
+        <p class="text-xs text-stone-500 mt-2">No additional fees or charges.</p>
+        <p class="text-xs text-stone-500 mt-2">Available for all guests during their stay.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">🍝</div><h3 class="text-xl font-bold text-emerald-700">Italian Fine Dining</h3>
+        <p class="text-stone-600 mt-2">Fresh meals inspired by Italian villas and seasonal ingredients.</p>
+        <p class="text-sm text-emerald-500 mt-2">Authentic Italian flavors in a cozy atmosphere.</p>
+        <p class="text-xs text-stone-500 mt-2">Open daily from 7:00 AM to 10:00 PM.</p>
+        <p class="text-xs text-stone-500 mt-2">Located on the ground floor.</p>
+        <p class="text-xs text-stone-500 mt-2">Reservations recommended for dinner.</p>
+        <p class="text-xs text-stone-500 mt-2">No additional fees or charges.</p>
+        <p class="text-xs text-stone-500 mt-2">Available for all guests during their stay.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">🧖</div><h3 class="text-xl font-bold text-emerald-700">Spa & Wellness</h3>
+        <p class="text-stone-600 mt-2">Quiet spa rooms with calming natural design.</p>
+        <p class="text-sm text-emerald-500 mt-2">Rejuvenate your body and mind in a peaceful environment.</p>
+        <p class="text-xs text-stone-500 mt-2">Open daily from 8:00 AM to 5:00 PM.</p>
+        <p class="text-xs text-stone-500 mt-2">Located on the ground floor.</p>
+        <p class="text-xs text-stone-500 mt-2">Reservations recommended for all services.</p>
+        <p class="text-xs text-stone-500 mt-2">No additional fees or charges.</p>
+        <p class="text-xs text-stone-500 mt-2">Available for all guests during their stay.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">📶</div><h3 class="text-xl font-bold text-emerald-700">Free Wi-Fi</h3>
+        <p class="text-stone-600 mt-2">High-speed internet throughout the hotel.</p>
+        <p class="text-xs text-stone-500 mt-2">Available for all guests during their stay.</p>
+        <p class="text-xs text-stone-500 mt-2">No additional fees or charges.</p>
+        <p class="text-xs text-stone-500 mt-2">Access to all public areas of the hotel.</p>
+        <p class="text-xs text-stone-500 mt-2">No restrictions on usage.</p>
+        <p class="text-xs text-stone-500 mt-2">Perfect for staying connected during your stay.</p>
+        <p class="text-xs text-stone-500 mt-2">Ideal for work and leisure activities.</p>
+        <p class="text-xs text-stone-500 mt-2">Stay connected with family and friends.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow border border-emerald-100">
+        <div class="text-4xl mb-3">🛎️</div><h3 class="text-xl font-bold text-emerald-700">24/7 Front Desk</h3>
+        <p class="text-stone-600 mt-2">Guest support available any time during your stay.</p>
+        <p class="text-xs text-stone-500 mt-2">Open 24 hours a day, 7 days a week.</p>
+        <p class="text-xs text-stone-500 mt-2">Assistance with check-in and check-out.</p>
+        <p class="text-xs text-stone-500 mt-2">Information about hotel amenities and services.</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer class="bg-slate-950 text-stone-300 text-center py-6 border-t border-emerald-900">
+    <p>© 2026 Villa Aurelia Nature Hotel Booking System</p>
+  </footer>
+
+</body>
+</html>

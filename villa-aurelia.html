@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Aurelia - Booking</title>
+
+  <!-- Tailwind CSS CDN for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom stylesheet for the Villa Aurelia theme -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main JavaScript file for validation, login, booking, and dashboard behavior -->
+  <script src="validation.js" defer></script>
+</head>
+<body class="bg-stone-100 text-stone-900">
+  <!-- Navigation bar used across the whole hotel website -->
+  <header class="bg-slate-950/95 text-stone-100 px-8 py-5 border-b border-emerald-800/50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide text-emerald-300">Villa Aurelia</h1>
+
+      <nav class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="HomePage.html" class="hover:text-emerald-300">Home</a>
+        <a href="villa-aurelia.html" class="text-emerald-300">Booking</a>
+        <a href="AboutUs.html" class="hover:text-emerald-300">About Us</a>
+        <a href="Amenities.html" class="hover:text-emerald-300">Amenities</a>
+        <a href="GuestReviews.html" class="hover:text-emerald-300">Guest Reviews</a>
+        <a href="CustomerService.html" class="hover:text-emerald-300">Customer Service</a>
+        <a href="Account.html" class="hover:text-emerald-300">Account</a>
+        <a href="Login.html" class="hover:text-emerald-300">Login</a>
+        <a href="Profile.html" class="hover:text-emerald-300">Profile</a>
+        <span id="navUser" class="text-emerald-300 font-bold"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Booking page hero -->
+  <section class="forest-bg text-white px-8 py-16 text-center">
+    <p class="uppercase tracking-[0.3em] text-emerald-300 font-semibold">Reserve Your Stay</p>
+    <h2 class="text-4xl md:text-5xl font-bold mt-4 glow-text">Book a Nature-Inspired Villa Room</h2>
+    <p class="text-stone-200 mt-4 max-w-2xl mx-auto">Select a room, choose your dates, and calculate your total stay instantly.</p>
+  </section>
+
+  <!-- Room cards -->
+  <section class="max-w-6xl mx-auto px-8 py-16">
+    <h2 class="text-3xl font-bold text-center mb-10">Available Rooms</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-emerald-100">
+        <div class="h-48 bg-gradient-to-br from-emerald-200 to-stone-200 flex items-center justify-center text-5xl">🛏️</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Garden Room</h3>
+          <p class="text-stone-600 mt-2">Botanical decor and warm natural lighting.</p>
+          <p class="text-emerald-700 font-bold mt-4">$120 / night</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-emerald-100">
+        <div class="h-48 bg-gradient-to-br from-sky-200 to-emerald-200 flex items-center justify-center text-5xl">🌿</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Greenhouse Suite</h3>
+          <p class="text-stone-600 mt-2">Inspired by glass ceilings, vines, and soft sunlight.</p>
+          <p class="text-emerald-700 font-bold mt-4">$180 / night</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden border border-emerald-100">
+        <div class="h-48 bg-gradient-to-br from-slate-900 to-emerald-700 flex items-center justify-center text-5xl">🏰</div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Castle Villa</h3>
+          <p class="text-stone-600 mt-2">Premium gothic-inspired villa room.</p>
+          <p class="text-emerald-700 font-bold mt-4">$300 / night</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking form -->
+  <section class="bg-slate-950 py-16 px-8">
+    <div class="max-w-2xl mx-auto glass-card rounded-3xl shadow-xl p-8 border border-emerald-200">
+      <h2 class="text-3xl font-bold text-center mb-6 text-slate-900">Booking Form</h2>
+
+      <form class="space-y-4" onsubmit="return false;">
+        <input id="name" type="text" placeholder="Full Name" class="input-focus w-full p-3 border rounded-lg">
+        <input id="email" type="email" placeholder="Email Address" class="input-focus w-full p-3 border rounded-lg">
+
+        <select id="room" class="input-focus w-full p-3 border rounded-lg">
+          <option value="">Select Room</option>
+          <option value="120">Garden Room - $120/night</option>
+          <option value="180">Greenhouse Suite - $180/night</option>
+          <option value="300">Castle Villa - $300/night</option>
+        </select>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input id="checkin" type="date" class="input-focus w-full p-3 border rounded-lg">
+          <input id="checkout" type="date" class="input-focus w-full p-3 border rounded-lg">
+        </div>
+
+        <input id="guests" type="number" min="1" placeholder="Number of Guests" class="input-focus w-full p-3 border rounded-lg">
+
+        <button type="button" onclick="calculateBooking()" class="w-full bg-emerald-700 text-white py-3 rounded-lg hover:bg-emerald-800">Submit Booking</button>
+      </form>
+
+      <div id="result" class="mt-6 text-center font-bold text-lg"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-stone-300 text-center py-6 border-t border-emerald-900">
+    <p>© 2026 Villa Aurelia Nature Hotel Booking System</p>
+  </footer>
+</body>
+</html>

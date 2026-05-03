@@ -1,0 +1,99 @@
+/* =========================================================
+   Villa Aurelia Custom CSS
+   This file stores reusable theme styles used across all pages.
+   Tailwind handles most layout, while this file handles custom effects.
+   ========================================================= */
+
+/* Frosted glass card effect used for forms and dashboards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(14px);
+}
+
+/* Rounded architectural card shape */
+.arch-card {
+  border-radius: 140px 140px 28px 28px;
+}
+
+/* Gothic arch shape used on the home page feature image */
+.gothic-arch {
+  border-radius: 160px 160px 30px 30px;
+}
+
+/* Nature-inspired hero background */
+.forest-bg {
+  background:
+    radial-gradient(circle at top left, rgba(132, 204, 22, 0.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.18), transparent 35%),
+    linear-gradient(135deg, #071a14, #12372a 45%, #1e3a3a);
+}
+
+/* Soft page background for lighter sections */
+.soft-pattern {
+  background:
+    linear-gradient(rgba(255,255,255,.88), rgba(255,255,255,.88)),
+    radial-gradient(circle at 20% 20%, rgba(16,185,129,.20), transparent 30%),
+    radial-gradient(circle at 80% 70%, rgba(180,83,9,.14), transparent 25%);
+}
+
+/* Spaced title text used in hero subtitles */
+.page-title {
+  letter-spacing: .08em;
+}
+
+/* Focus effect for form fields */
+.input-focus:focus {
+  outline: none;
+  border-color: #047857;
+  box-shadow: 0 0 0 3px rgba(16,185,129,.18);
+}
+
+/* Neon glow effect for important headings */
+.glow-text {
+  text-shadow: 0 0 10px rgba(16,185,129,.6), 0 0 20px rgba(16,185,129,.4);
+}
+
+/* Success message box used by JavaScript */
+.success-box {
+  animation: fadePop .5s ease-in-out;
+  background: rgba(16,185,129,.12);
+  border: 1px solid #10b981;
+  color: #047857;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* Error message box used by JavaScript */
+.error-box {
+  animation: fadePop .5s ease-in-out;
+  background: rgba(239,68,68,.10);
+  border: 1px solid #ef4444;
+  color: #dc2626;
+  padding: 14px;
+  border-radius: 14px;
+}
+
+/* Small animation for validation messages */
+@keyframes fadePop {
+  from { opacity: 0; transform: scale(.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Print mode makes booking receipts cleaner */
+@media print {
+  header,
+  footer,
+  .forest-bg,
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .glass-card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}

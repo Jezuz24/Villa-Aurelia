@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Aurelia - Login</title>
+
+  <!-- Tailwind CSS CDN for utility classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom stylesheet for the Villa Aurelia theme -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Main JavaScript file for validation, login, booking, and dashboard behavior -->
+  <script src="validation.js" defer></script>
+</head>
+<body class="bg-stone-100 text-stone-900">
+  <!-- Navigation bar used across the whole hotel website -->
+  <header class="bg-slate-950/95 text-stone-100 px-8 py-5 border-b border-emerald-800/50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-4 justify-between items-center">
+      <h1 class="text-2xl font-bold tracking-wide text-emerald-300">Villa Aurelia</h1>
+
+      <nav class="flex flex-wrap justify-center gap-4 text-sm">
+                <a href="HomePage.html" class="hover:text-emerald-300">Home</a>
+        <a href="villa-aurelia.html" class="hover:text-emerald-300">Booking</a>
+        <a href="AboutUs.html" class="hover:text-emerald-300">About Us</a>
+        <a href="Amenities.html" class="hover:text-emerald-300">Amenities</a>
+        <a href="GuestReviews.html" class="hover:text-emerald-300">Guest Reviews</a>
+        <a href="CustomerService.html" class="hover:text-emerald-300">Customer Service</a>
+        <a href="Account.html" class="hover:text-emerald-300">Account</a>
+        <a href="Login.html" class="text-emerald-300">Login</a>
+        <a href="Profile.html" class="hover:text-emerald-300">Profile</a>
+        <span id="navUser" class="text-emerald-300 font-bold"></span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Login hero -->
+  <section class="forest-bg text-white px-8 py-16 text-center">
+    <p class="uppercase tracking-[0.3em] text-emerald-300 font-semibold">Account Login</p>
+    <h2 class="text-4xl md:text-5xl font-bold mt-4 glow-text">Login to Your Account</h2>
+    <p class="text-stone-200 mt-4">Access your Villa Aurelia profile and booking confirmation.</p>
+  </section>
+
+  <!-- Login form -->
+  <section class="max-w-xl mx-auto px-8 py-16">
+    <div class="glass-card rounded-3xl shadow-2xl p-8 border border-emerald-200">
+      <h3 class="text-3xl font-bold text-center mb-6">Login Form</h3>
+
+      <form class="space-y-5" onsubmit="return false;">
+        <div>
+          <label class="block text-sm font-semibold text-stone-700 mb-1">Email Address</label>
+          <input id="loginEmail" type="email" placeholder="example@email.com" class="input-focus w-full p-3 border rounded-lg bg-white/80">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-stone-700 mb-1">Password</label>
+          <input id="loginPassword" type="password" placeholder="Enter password" class="input-focus w-full p-3 border rounded-lg bg-white/80">
+        </div>
+
+        <button type="button" onclick="loginUser()" class="w-full bg-emerald-700 text-white py-3 rounded-xl hover:bg-emerald-800 shadow-lg transition duration-300 hover:scale-[1.02]">Login</button>
+      </form>
+
+      <div id="loginResult" class="mt-6 text-center font-bold"></div>
+      <p class="text-center mt-6 text-stone-600">Don't have an account? <a href="Registration.html" class="text-emerald-700 underline">Register here</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-stone-300 text-center py-6 border-t border-emerald-900">
+    <p>© 2026 Villa Aurelia Nature Hotel Booking System</p>
+  </footer>
+</body>
+</html>
