@@ -1,3 +1,4 @@
+<!-- This is the main landing page (Home Page) for the Villa Aurelia hotel -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +15,7 @@
   <!-- Main JavaScript file for validation, login, booking, and dashboard behavior -->
   <script src="validation.js" defer></script>
 </head>
+
 <body class="bg-stone-100 text-stone-900">
   <!-- Navigation bar used across the whole hotel website -->
   <header class="bg-slate-950/95 text-stone-100 px-8 py-5 border-b border-emerald-800/50">
@@ -36,27 +38,38 @@
   </header>
 
   <!-- Main landing hero section -->
-  <section class="forest-bg text-white min-h-[82vh] px-8 py-20">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div>
-        <p class="uppercase tracking-[0.3em] text-emerald-300 font-semibold">Nature • Luxury • Architecture</p>
-        <h2 class="text-4xl md:text-5xl font-bold mt-4 glow-text">A botanical castle retreat inspired by glass gardens.</h2>
-        <p class="text-stone-200 mt-6 text-lg">Villa Aurelia blends modern hotel booking with gothic arches, greenhouse interiors, soft candlelight, and nature-inspired design.</p>
+  <section class="relative h-[600px] bg-cover bg-center flex items-center"
+    style="background-image: url('images/hero/banner.png');">
 
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="villa-aurelia.html" class="bg-emerald-600 text-white px-7 py-3 rounded-full hover:bg-emerald-700 shadow-lg">Book Your Stay</a>
-          <a href="Account.html" class="bg-white/15 border border-emerald-200 text-white px-7 py-3 rounded-full hover:bg-white/25">Create Account</a>
-        </div>
-      </div>
+    <!-- DARK OVERLAY (makes text readable) -->
+    <div class="absolute inset-0 bg-black/50"></div>
 
-      <!-- Decorative hotel visual placeholder -->
-      <div class="glass-card border border-emerald-200/40 shadow-2xl p-6 gothic-arch">
-        <div class="h-96 gothic-arch bg-gradient-to-br from-emerald-100 via-sky-100 to-stone-200 flex items-center justify-center">
-          <div class="text-center">
-            <p class="text-7xl">🌿</p>
-            <p class="text-slate-800 font-bold mt-4 text-xl">Botanical Villa Escape</p>
-          </div>
-        </div>
+    <!-- CONTENT -->
+    <div class="relative z-10 max-w-6xl mx-auto px-8 text-white">
+      <p class="uppercase tracking-[0.3em] text-emerald-300 font-semibold">
+        Nature • Luxury • Architecture
+      </p>
+
+      <h1 class="text-5xl md:text-6xl font-bold mt-4 leading-tight">
+        A botanical castle <br>
+        retreat inspired by nature
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg text-stone-200">
+        Villa Aurelia blends modern luxury with lush greenery,
+        tranquil ocean views, and unforgettable experiences.
+      </p>
+
+      <div class="mt-8 flex gap-4">
+        <a href="villa-aurelia.html"
+          class="bg-emerald-600 px-6 py-3 rounded-xl hover:bg-emerald-700">
+          Book Your Stay
+        </a>
+
+        <a href="Registration.html"
+          class="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black">
+          Create Account
+        </a>
       </div>
     </div>
   </section>
@@ -75,3 +88,4 @@
   </footer>
 </body>
 </html>
+
